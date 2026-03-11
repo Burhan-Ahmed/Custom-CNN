@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alzheimer-api
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: alzheimer-api
+
+  template:
+    metadata:
+      labels:
+        app: alzheimer-api
+
+    spec:
+      containers:
+      - name: alzheimer-api
+        image: yourdockerhubusername/alzheimer-api:latest
+        ports:
+        - containerPort: 8000
