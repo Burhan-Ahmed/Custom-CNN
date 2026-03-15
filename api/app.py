@@ -7,7 +7,7 @@ import io
 app = FastAPI(title="Alzheimer MRI Classification API")
 
 # Load trained model
-model = tf.keras.models.load_model("../model/alzheimer_cnn_model.h5")
+model = tf.keras.models.load_model("model/alzheimer_cnn_model.h5")
 
 # Class labels
 classes = [
